@@ -7,35 +7,30 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+    - name: Setup MSBuild path
+      uses: microsoft/setup-msbuild@v1.0.0
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+    - name: Build and Test
+      run: |
+        msbuild /restore /p:Configuration=Debug /p:Platform="Any CPU" YourSolutionFile.sln
+        dotnet test YourTestProjectFolder/YourTestProject.csproj --configuration Debug
 
     - name: Check for code conflicts
       run: |
         git fetch --prune
         git checkout origin/master
         git merge --no-commit --no-ff origin/develop
-        CONFLICTS=$(git diff --name-only --diff-filter=U)
-        if [ -n "$CONFLICTS" ]; then
+        git diff --exit-code origin/master..HEAD
+        if [ $? -ne 0 ]; then
           echo "Code conflicts detected. Please resolve conflicts before merging."
           exit 1
         fi
-        git checkout -
-        git merge --abort
 
     - name: Sync with master branch (if no conflicts)
       if: ${{ success() }}
