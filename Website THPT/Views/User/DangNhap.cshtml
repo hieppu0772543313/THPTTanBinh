@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style type="text/css">
+    td {
+        height: 40px;
+    }
+    .tblDN {
+        border:thick;
+        background-color:darksalmon;
+        border-radius: 7px;
+        margin-bottom: 43px;
+        width: 45%;
+        
+    }
+    input{
+        border-radius: 7px;
+        border-color:black;
+        border-width: 1px;
+        background-color: none;
+       
+       
+    }
+    .txtDn{
+        text-align:center;
+        font-weight: bold;
+    }
+     .txtMK{
+        text-align:center;
+        font-weight:bold;
+    }
+    .btnDN{
+        width:auto;
+
+    }
+    input#TenDN{
+        width: 70%;
+    }
+    input#MatKhau{
+        width: 70%;
+    }
+</style>
+
+<div class="container">
+    <h4 style="color:red; text-align:center;">@ViewBag.ThongBao</h4>
+    <h2 style="text-align:center; font-weight:bold; color:#90201e">ĐĂNG NHẬP</h2>
+    <table align="center" class="tblDN">
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true)
+
+            if (Request.Cookies["TenDN"] != null && Request.Cookies["MatKhau"] != null)
+            {
+                <tr>
+                    <td class="txtDn">Tên đăng nhập: </td>
+                    <td align="right">
+                        @Html.TextBox("TenDN")
+                        @ViewData["Err1"]
+                    </td>
+                </tr>
+                <tr>
+                    <td class="txtMK">Mật khẩu: </td>
+                    <td>
+                        @Html.Password("MatKhau")
+                        @ViewBag.Err2
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td class="txtDn">Tên đăng nhập: </td>
+                    <td>
+                        @Html.TextBox("TenDN")
+                        @ViewData["Err1"]
+                    </td>
+                </tr>
+                <tr>
+                    <td class="txtMK">Mật khẩu: </td>
+                    <td>
+                        @Html.Password("MatKhau")
+                        @ViewData["Err2"]
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td align="left" class="checkCook">
+                    @Html.CheckBox("remember")
+                    <span style="font-style:italic;">
+                        Nhớ thông tin
+                        đăng nhập
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input class="btnDN" type="submit" value="Đăng Nhập" />
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Website_THPT.Models.GIAOVIEN>
+@{
+    ViewBag.Title = "QL GIÁO VIÊN";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold">QUẢN LÝ DANH SÁCH GIÁO VIÊN</h2>
+<a href="@Url.Action("Create", "QLGV")" class="btn btn-success" role="button" style="margin-bottom: 5px;">
+    Thêm
+</a>
+<table class="table">
+    <tr>
+        <th>
+            Tên
+        </th>
+        <th>
+            Tên ĐN
+        </th>
+        <th>
+            Mật Khẩu
+        </th>
+
+        <th>
+            Địa Chỉ
+        </th>
+        <th>
+            Chức Năng
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenGV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+
+            <td>
+                <a href="@Url.Action("Details", new { id = item.MaGV })" class="btn btn-primary" role="button"><i class="fa-solid fa-circle-info"></i></a>
+                <a href="@Url.Action("Edit", new { id = item.MaGV })" class="btn btn-warning" role="button"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a href="@Url.Action("Delete", new { id = item.MaGV })" class="btn btn-danger" role="button"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

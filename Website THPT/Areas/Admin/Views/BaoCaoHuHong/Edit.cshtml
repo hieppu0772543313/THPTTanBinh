@@ -1,0 +1,77 @@
+﻿@model  Website_THPT.Models.BAOCAOHUHONG
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold">THÔNG TIN PHIẾU BÁO CÁO HƯ HỎNG</h2>
+@using (Html.BeginForm("Edit", "BaoCaoHuHong", FormMethod.Post, new
+{
+    @enctype =
+"multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Mã Báo Cáo:</label>
+            <div class="col-md-10">
+                @*Chỉ hiển thị mã sách không cho sửa*@
+                <input type="text" size="20" name="iMaBaoCao" value="@Model.MaBaoCao" readonly />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Thiết Bị:</label>
+            <div class="col-md-10">
+                @Html.DropDownList("MaThietBi")
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tình Trạng</label>
+            <div class="col-md-10">
+                <input type="text" size="20" name="TinhTrang" value="@Model.TinhTrang" readonly />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Số Lượng</label>
+            <div class="col-md-10">
+                <input type="number" min="1" required name="iSoLuong" value="@Model.SoLuong" readonly />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Lớp</label>
+            <div class="col-md-10">
+                <input type="text" size="20" name="iMaLop" value="@Model.LOP.TenLop" readonly />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Trạng Thái</label>
+            <div class="col-md-10">
+                <input type="radio" name="TrangThai" value="Chưa Duyệt" checked="checked" />Chưa Duyệt <br />
+                <input type="radio" name="TrangThai" value="Đã Duyệt" />Đã Duyệt <br />
+                <input type="radio" name="TrangThai" value="Đã Sửa" />Đã Sửa <br />
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU THÔNG TIN" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ CƠ SỞ VẬT CHẤT", "Index")
+</div>
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

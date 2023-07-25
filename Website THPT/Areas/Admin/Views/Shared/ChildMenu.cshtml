@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Website_THPT.Models.MENU>
+@{
+    int i = 0;
+    @: <ul style="list-style: none; margin-left: 20px">
+        foreach (var item in Model)
+        {
+            <li style="border-bottom: 1px solid #808080; height: 37px;">
+                <span style="font-weight: bold; color: blue;">@Html.DisplayFor(modelItem => item.MenuName)</span>
+                <span style="float: right">
+                    <button class="btn btn-warning" name="update" id="@item.Id"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <button class="btn btn-danger" name="delete" id="@item.Id"><i class="fa-solid fa-trash"></i></button>
+                </span>
+            </li>
+            if (ViewBag.lst[i] != 0)
+            {
+                @Html.Action("ChildMenu", "Menu", new { parentID = item.Id })
+            }
+            i++;
+        }
+    @:</ul>
+}

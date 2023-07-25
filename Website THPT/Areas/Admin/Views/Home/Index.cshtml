@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+<style>
+    .myimg {
+        height: 300px;
+        width: 600px;
+        margin-left: 200px;
+        margin-top: 20px;
+    }
+</style>
+
+<img class="myimg" src="~/Images/Wellcome.png" />
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}
+
+
+

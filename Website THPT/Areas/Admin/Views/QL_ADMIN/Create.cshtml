@@ -1,0 +1,55 @@
+﻿@model Website_THPT.Models.ADMIN
+@{
+    ViewBag.Title = "THÊM ADMIN";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="font-weight: bold; text-align: center; color: #90201e">THÊM ADMIN</h2>
+
+@using (Html.BeginForm("Create", "QL_ADMIN", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Admin:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sTen" value="@ViewBag.Ten"
+                       required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Đăng nhập:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sTenDN" value="@ViewBag.TenDN"
+                       required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pass:</label>
+            <div class="col-md-10">
+                <input type="text" size="70" name="sPass" value="@ViewBag.Pass"
+                       required />
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<div>
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ ADMIN", "Index")
+</div>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

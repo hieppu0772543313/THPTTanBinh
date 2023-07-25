@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Website_THPT.Models.TRANGTIN>
+@{
+    ViewBag.Title = "Quản lý trang tin";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+
+<h2 style="text-align: center">QUẢN LÝ TRANG TIN</h2>
+<a href="@Url.Action("Create", "TrangTin")" class="btn btn-success" role="button" style="margin-bottom: 5px;">
+    Thêm
+</a>
+<table class="table">
+    <tr>
+        <th>
+            Tên Trang
+        </th>
+        @*<th>
+                Nội dung
+            </th>*@
+        <th>
+            Ngày Tạo
+        </th>
+        <th>
+            Metatitle
+        </th>
+        <th>
+            Chức năng
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayTao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metatitle)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.Ma })" class="btn btn-warning" role="button"><i class="fa-regular fa-pen-to-square"></i></a>
+
+                <a href="@Url.Action("Delete", new { id = item.Ma })" class="btn btn-danger" role="button"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

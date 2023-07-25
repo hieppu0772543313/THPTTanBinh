@@ -1,0 +1,97 @@
+﻿@model IEnumerable <Website_THPT.Models.Diem>
+@{
+    ViewBag.Title = "Xem Điểm";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .hang{
+        border:solid 1px;
+        border-color: black;
+        text-align:center
+    }
+    .cot {
+        border: solid 1px;
+        border-color: black;
+        text-align: center
+    }
+    .table > tbody > tr > td, 
+    .table > tbody > tr > th, 
+    .table > tfoot > tr > td, 
+    .table > tfoot > tr > th, 
+    .table > thead > tr > td, 
+    .table > thead > tr > th {
+        border-top: none
+    }
+    .mytable{
+        width: 40%;
+    }
+    .my{
+        margin-bottom: 125px;
+    }
+</style>
+<div class="my">
+    <form>
+        <h2 style="text-align: center; font-weight: bold; color: #90201e">XEM ĐIỂM</h2>
+        <table class="table mytable">
+            <tr>
+                <th>
+                    <select name="sMaHK">
+                        <option value="HK1">Học Kỳ 1</option>
+                        <option value="HK2">Học Kỳ 2</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th><input type="submit" value="Xem Điểm" /></th>
+            </tr>
+        </table>
+
+    </form>
+    @{
+        if (Model != null)
+        {
+            <table class="table">
+                <tr class="hang">
+                    <th class="cot">
+                        Tên môn học
+                    </th>
+                    <th class="cot">
+                        Điểm Hệ số 1
+                    </th>
+                    <th class="cot">
+                        Điểm hệ số 2
+                    </th>
+                    <th class="cot">
+                        Điểm thi
+                    </th>
+                    <th class="cot">
+                        Điểm TB
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr class="hang">
+                        <td class="cot">
+                            @item.monhoc.TenMon
+                        </td>
+                        <td class="cot">
+                            @item.ketqua.DiemHS1
+                        </td>
+                        <td class="cot">
+                            @item.ketqua.DiemHS2
+                        </td>
+                        <td class="cot">
+                            @item.ketqua.DiemThi
+                        </td>
+                        <td class="cot">
+                            @item.DiemTB
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+    }
+</div>

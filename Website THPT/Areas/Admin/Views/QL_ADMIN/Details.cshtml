@@ -1,0 +1,48 @@
+﻿@model Website_THPT.Models.ADMIN
+@{
+    ViewBag.Title = "CHI TIẾT ADMIN";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center">THÔNG TIN ADMIN</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding-left:200px;">
+        <dt>
+            Mã giáo viên:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            Tên Học Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ten)
+        </dd>
+        <dt>
+            Tên ĐN:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenDn)
+        </dd>
+        <dt>
+            Mật Khẩu:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pass)
+        </dd>
+
+
+    </dl>
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", "QL_ADMIN", new { id = Model.ID })" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></a> |
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ ADMIN", "Index")
+</p>
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

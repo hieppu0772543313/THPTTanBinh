@@ -1,0 +1,41 @@
+﻿@model Website_THPT.Models.TRANGTIN
+@{
+    ViewBag.Title = "TrangTin";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style>
+    .ten {
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: #90201e;
+    }
+
+    .trang {
+        border: groove;
+        border-color: #d44545;
+        margin-bottom: 10px;
+    }
+    .nd{
+        margin: 10px;
+    }
+    hr 
+    {
+        border-color: black;
+        width: 30%;
+    }
+</style>
+<div class="trang">
+    <h3 class="ten">@Model.Ten</h3>
+    <h5 style="text-align:center; font-style:italic">( Ngày đăng: @Html.FormatValue(@Model.NgayTao, "{0:dd/MM/yyyy}") )</h5>
+
+    <hr />
+
+    <div class="nd">
+        @Html.Raw(Model.NoiDung)
+    </div>
+
+    <br /><br />
+
+    
+</div>

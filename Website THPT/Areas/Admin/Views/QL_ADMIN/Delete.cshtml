@@ -1,0 +1,33 @@
+﻿@model Website_THPT.Models.ADMIN
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align:center;">XÁC NHẬN THÔNG TIN CẦN XÓA</h2>
+
+<h3 style="text-align:center">Bạn quyết định xóa admin này?</h3>
+<h4 style="text-align:center;">@Html.Raw(ViewBag.ThongBao)</h4>
+<div style="text-align:center;">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt> Tên ADMIN: </dt>
+        <dd> @Html.DisplayFor(model => model.Ten) </dd>
+        <dt> Tên Đăng Nhập: </dt>
+        <dd> @Html.DisplayFor(model => model.TenDn) </dd>
+
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="XÓA" class="btn btn-warning" /> | @Html.ActionLink("VỀ TRANG QUẢN LÝ ADMIN", "Index")
+        </div>
+    }
+</div>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

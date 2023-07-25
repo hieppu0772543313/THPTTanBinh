@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADMIN</title>
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+
+    <link href="~/Content/Admin/css/demo.css" rel="stylesheet" />
+    <link href="~/Content/Admin/css/style.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/Admin/css")*@
+</head>
+<body>
+    <main>
+        <article>
+
+            <div class="wrapper">
+                <form action="~/Admin/Home/Login" method="post" class="form-signin">
+                    <h2 class="form-signin-heading">Please login</h2>
+                    <input type="text" class="form-control" name="UserName" placeholder="Type your Username" required="" autofocus="" />
+                    <input type="password" class="form-control" name="Password" placeholder="Type your Password" required="" />
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                    </label>
+                    <p style="font-style : initial; color: red; margin: 0px;">@ViewBag.ThongBao</p>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                </form>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
+

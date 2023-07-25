@@ -1,0 +1,66 @@
+﻿@model Website_THPT.Models.HOCSINH
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center">THÔNG TIN HỌC SINH</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding-left:200px;">
+        <dt>
+            Tên Học Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenHS)
+        </dd>
+        <dt>
+            Tên ĐN:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenDN)
+        </dd>
+        <dt>
+            Mật Khẩu:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pass)
+        </dd>
+        <dt>
+            Lớp
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LOP.TenLop)
+        </dd>
+        <dt>
+            Ngày Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+        <dt>
+            Nơi Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NoiSinh)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", "QLHS", new { id = Model.MaHS })" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></a> |
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ HỌC SINH", "Index")
+</p>
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

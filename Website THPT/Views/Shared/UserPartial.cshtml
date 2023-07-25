@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Website_THPT.Models.HOCSINH>
+@if (Session["TaiKhoan"] != null)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">@Session["HoTen"].ToString()<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="@Url.Action("DangXuat", "User")"><span class="glyphicon glyphicon-log-in"></span> Đăng Xuất</a></li>
+            </ul>
+        </li>
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Người dùng<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="@Url.Action("DangNhap", "User")"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
+            </ul>
+        </li>
+       
+    </ul>
+}

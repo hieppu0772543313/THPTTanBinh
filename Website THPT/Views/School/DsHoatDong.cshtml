@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Website_THPT.Models.TINTUC>
+
+@{
+    ViewBag.Title = "Danh sách hoạt động";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style>
+    .list-group-item.active {
+        font-weight: bold;
+        text-align: center;
+        background-color: #d44545;
+        border: none;
+    }
+        .list-group-item.active:hover {
+            background-color: #d44545;
+        }
+</style>
+<ul class="list-group">
+    <li class="list-group-item active">TIN TỨC HOẠT ĐỘNG</li>
+
+
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("HoatDong","School", new { ma = item.Ma})" class="list-group-item">@item.TenTin</a>
+
+    }
+</ul>
+

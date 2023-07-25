@@ -1,0 +1,72 @@
+﻿@model Website_THPT.Models.GIAOVIEN
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center">THÔNG TIN GIÁO VIÊN</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal" style="padding-left:200px;">
+        <dt>
+            Mã giáo viên:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaGV)
+        </dd>
+        <dt>
+            Tên Học Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenGV)
+        </dd>
+        <dt>
+            Tên ĐN:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenDN)
+        </dd>
+        <dt>
+            Mật Khẩu:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pass)
+        </dd>
+        <dt>
+            Địa Chỉ
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+        <dt>
+            Số điện thoại
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sdt)
+        </dd>
+        <dt>
+            Email:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            Ngày Sinh:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    <a href="@Url.Action("Edit", "QLGV", new { id = Model.MaGV })" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i></a> |
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ GIÁO VIÊN", "Index")
+</p>
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

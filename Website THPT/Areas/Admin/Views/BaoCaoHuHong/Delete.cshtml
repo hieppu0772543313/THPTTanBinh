@@ -1,0 +1,59 @@
+﻿@model Website_THPT.Models.BAOCAOHUHONG
+@{
+    ViewBag.Title = "Xoá Phiếu";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold">XOÁ PHIẾU BÁO CÁO HƯ HỎNG THIẾT BỊ</h2>
+
+<h3 style="color:red">Bạn chắc chắn muốn xoá chứ ?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Phiếu
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaBaoCao)
+        </dd>
+
+        <dt>
+            Mã Thiết Bị
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaThietBi)
+        </dd>
+        <dt>
+            Mã Lớp
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaLop)
+        </dd>
+
+        <dt>
+            Tình Trạng
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+
+
+
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-warning" /> | @Html.ActionLink("VỀ TRANG QUẢN LÝ CƠ SỞ VẬT CHẤT", "Index")
+        </div>
+    }
+</div>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

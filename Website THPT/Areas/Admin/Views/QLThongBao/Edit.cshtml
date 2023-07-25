@@ -1,0 +1,63 @@
+﻿@model Website_THPT.Models.THONGBAO
+@{
+    ViewBag.Title = "Chỉnh sửa thông báo";
+    Layout = "~/Areas/Admin/Views/Shared/GV_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold; color: #90201e">Chỉnh sửa thông báo</h2>
+<script src="~/ckeditor_4.20.0_standard/ckeditor/ckeditor.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" }) @Html.HiddenFor(model => model.Ma)
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.Ten, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-2" style="font-weight: bold; text-align: right; ">Tên</div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenThongBao, new { htmlAttributes = new { @class
+                = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenThongBao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.NoiDung, htmlAttributes: new { @class = "control- label col-md-2" })*@
+            <div class="col-md-2" style="font-weight: bold; text-align: right; ">Nội dung</div>
+            <div class="col-md-10">
+<textarea name="NoiDung" id="nd">@Model.NoiDung</textarea>
+                <script>CKEDITOR.replace('nd');</script>
+
+                @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text- danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.NgayTao, htmlAttributes: new { @class = "control- label col-md-2" })*@
+            <div class="col-md-2" style="font-weight: bold; text-align: right; ">Ngày Tạo</div>
+            <div class="col-md-10">
+                <input type="datetime" name="NgayTao" value="@Convert.ToDateTime(Model.NgayTao)" class="form-control" />
+
+                @Html.ValidationMessageFor(model => model.NgayTao, "", new { @class = "text- danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("< Quay về danh sách thông báo", "Index")
+</div>
+
+
+@section NavLeft_GV_Partial{
+    @Html.Action("NavLeft_GV_Partial", "Home")
+}
+

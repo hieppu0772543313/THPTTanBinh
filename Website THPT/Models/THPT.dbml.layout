@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 19.375" name="THPT">
+  <DataContextMoniker Name="/THPTDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2b97769c-6bee-4992-a965-03080799589c" absoluteBounds="4, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/THPTDataContext/ADMIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4910c37a-5381-48a9-a62c-728dda5b9ab9" absoluteBounds="4.0150000000000006, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57098d9d-acdf-465b-8564-ed7fc2e33c88" absoluteBounds="2, 16.625, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/THPTDataContext/GIAOVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db2ff9eb-e6fd-4d00-94c2-7e00e1ccc569" absoluteBounds="2.015, 17.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="641ba315-b472-4bd4-b6db-32bd14a89a10" absoluteBounds="0.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/THPTDataContext/TRANGTIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a36c85c2-c3b3-4f80-81aa-05bc2c445519" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55c37734-62a5-4b9f-bef0-fbbd755daf7a" absoluteBounds="1.75, 14.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/THPTDataContext/GVCN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d787ae57-7a34-44dd-b089-0059988b8b9b" absoluteBounds="1.7650000000000001, 14.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff534ff0-0661-4673-95fb-8d3a798cbf80" absoluteBounds="0.75, 6.375, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/THPTDataContext/HOCKY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8142322e-b18c-4246-aa56-1b1065e77ad5" absoluteBounds="0.765, 6.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7e2f46f-c24c-47ec-a148-edb6a30a2863" absoluteBounds="3.75, 9.625, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/THPTDataContext/HOCSINH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60268044-b1af-461c-9e35-6c5715167637" absoluteBounds="3.765, 10.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40698f0d-2cf2-4c63-9c94-f9d00d317cea" absoluteBounds="14.25, 4, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/THPTDataContext/KETQUA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e7f44d0-b6fe-40c8-bf10-0ab1caf6e486" absoluteBounds="14.265, 4.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f0b5ef5-23c4-45b1-9692-9a709568798e" absoluteBounds="1.75, 4, 2, 1.193992513020834">
+      <DataClassMoniker Name="/THPTDataContext/KHOI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23060ce7-13dc-4ae7-8d23-f56403873c01" absoluteBounds="1.7650000000000001, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b844fdac-3461-42ce-b610-add1fb3c4fec" absoluteBounds="1, 10.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/THPTDataContext/LOP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25b70e94-5685-42d8-95f7-5ce9071eec9c" absoluteBounds="1.0150000000000001, 10.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a9306ed6-447c-4fd8-92ef-2fe0dc14105b" absoluteBounds="7.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/THPTDataContext/MENU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="429d6dd0-6a70-4570-ad65-4f5df509d522" absoluteBounds="7.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="054acbae-fd55-4406-8c80-c92280bcbcf7" absoluteBounds="3.5, 6.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/THPTDataContext/MONHOC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34d8ac0d-9efa-4df4-b626-bd69a7ebd7d9" absoluteBounds="3.515, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e79000da-412a-4838-8f46-c74c17d79d46" absoluteBounds="9.25, 6.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/THPTDataContext/MONHOCCHITIET" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be26e76b-09c3-4f3d-97db-f9b2b982a394" absoluteBounds="9.265, 6.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c569233-e28a-4e48-814c-e30733e2d283" absoluteBounds="6.75, 9.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/THPTDataContext/THONGBAO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99f1b4b2-45b3-4848-a62b-aeb110adc128" absoluteBounds="6.765, 10.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="181884b3-948f-4a12-9951-d49283ca0e73" absoluteBounds="9.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/THPTDataContext/TINTUC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7dbd449f-8821-417f-a61e-5e90fb11249d" absoluteBounds="9.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ec8f408-2c5c-42e0-8b0f-11187f18779e" absoluteBounds="12, 6, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/THPTDataContext/TKB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c54a179d-2bda-49ab-a4ec-53862762c889" absoluteBounds="12.015, 6.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 16.625); (2.875 : 15.5689925130208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/GIAOVIEN/GIAOVIEN_GVCN" />
+      <nodes>
+        <classShapeMoniker Id="57098d9d-acdf-465b-8564-ed7fc2e33c88" />
+        <classShapeMoniker Id="55c37734-62a5-4b9f-bef0-fbbd755daf7a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.125 : 6.375); (1.125 : 5.73159912109375); (14.25 : 5.73159912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/HOCKY/HOCKY_KETQUA" />
+      <nodes>
+        <classShapeMoniker Id="ff534ff0-0661-4673-95fb-8d3a798cbf80" />
+        <classShapeMoniker Id="40698f0d-2cf2-4c63-9c94-f9d00d317cea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 11.8742496744792); (9.38541666666667 : 11.8742496744792 : JumpStart); (9.55208333333333 : 11.8742496744792 : JumpEnd); (14.7187475 : 11.8742496744792); (14.7187475 : 7.1170068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/HOCSINH/HOCSINH_KETQUA" />
+      <nodes>
+        <classShapeMoniker Id="d7e2f46f-c24c-47ec-a148-edb6a30a2863" />
+        <classShapeMoniker Id="40698f0d-2cf2-4c63-9c94-f9d00d317cea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 10.9142976888021); (3.75 : 10.9142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/LOP/LOP_HOCSINH" />
+      <nodes>
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+        <classShapeMoniker Id="d7e2f46f-c24c-47ec-a148-edb6a30a2863" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 10.488396844401); (3.625 : 10.488396844401); (3.625 : 8.25); (9.38541666666667 : 8.25 : JumpStart); (9.55208333333333 : 8.25 : JumpEnd); (14.6354141666667 : 8.25 : JumpStart); (14.8020808333333 : 8.25 : JumpEnd); (15.25 : 8.25); (15.25 : 7.1170068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/LOP/LOP_KETQUA" />
+      <nodes>
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+        <classShapeMoniker Id="40698f0d-2cf2-4c63-9c94-f9d00d317cea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.375 : 14.375); (2.375 : 11.7035953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/GVCN/GVCN_LOP" />
+      <nodes>
+        <classShapeMoniker Id="55c37734-62a5-4b9f-bef0-fbbd755daf7a" />
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.59699625651042); (1.5 : 4.59699625651042); (1.5 : 6.125); (3.25 : 6.125); (3.25 : 9.75); (1.921873 : 9.75); (1.921873 : 10.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/KHOI/KHOI_LOP" />
+      <nodes>
+        <classShapeMoniker Id="6f0b5ef5-23c4-45b1-9692-9a709568798e" />
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.468752 : 16.625); (3.468752 : 15.8189925130208); (4 : 15.8189925130208); (4 : 12.4151025390625); (3.375 : 12.4151025390625); (3.375 : 6.91429768880208); (3.5 : 6.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/GIAOVIEN/GIAOVIEN_MONHOC" />
+      <nodes>
+        <classShapeMoniker Id="57098d9d-acdf-465b-8564-ed7fc2e33c88" />
+        <classShapeMoniker Id="054acbae-fd55-4406-8c80-c92280bcbcf7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.30414510091146); (3.16666666666667 : 7.30414510091146 : JumpStart); (3.45833333333333 : 7.30414510091146 : JumpEnd); (3.5 : 7.30414510091146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/HOCKY/HOCKY_MONHOC" />
+      <nodes>
+        <classShapeMoniker Id="ff534ff0-0661-4673-95fb-8d3a798cbf80" />
+        <classShapeMoniker Id="054acbae-fd55-4406-8c80-c92280bcbcf7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 6.125); (10.25 : 5.18912062825521); (14.25 : 5.18912062825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/MONHOCCHITIET/MONHOCCHITIET_KETQUA" />
+      <nodes>
+        <classShapeMoniker Id="e79000da-412a-4838-8f46-c74c17d79d46" />
+        <classShapeMoniker Id="40698f0d-2cf2-4c63-9c94-f9d00d317cea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 17.8950512695313); (9.46875 : 17.8950512695313); (9.46875 : 7.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/GIAOVIEN/GIAOVIEN_MONHOCCHITIET" />
+      <nodes>
+        <classShapeMoniker Id="57098d9d-acdf-465b-8564-ed7fc2e33c88" />
+        <classShapeMoniker Id="e79000da-412a-4838-8f46-c74c17d79d46" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 10.9142976888021); (3.5625 : 10.9142976888021); (3.5625 : 9.375); (9.38541666666667 : 9.375 : JumpStart); (9.55208333333333 : 9.375 : JumpEnd); (9.625 : 9.375); (9.625 : 8.5); (10.390627 : 8.5); (10.390627 : 7.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/LOP/LOP_MONHOCCHITIET" />
+      <nodes>
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+        <classShapeMoniker Id="e79000da-412a-4838-8f46-c74c17d79d46" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.91429768880208); (8.04166666666667 : 6.91429768880208 : JumpStart); (8.20833333333333 : 6.91429768880208 : JumpEnd); (9.25 : 6.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/MONHOC/MONHOC_MONHOCCHITIET" />
+      <nodes>
+        <classShapeMoniker Id="054acbae-fd55-4406-8c80-c92280bcbcf7" />
+        <classShapeMoniker Id="e79000da-412a-4838-8f46-c74c17d79d46" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 6.375); (2.125 : 6.03125); (8.04166666666667 : 6.03125 : JumpStart); (8.20833333333333 : 6.03125 : JumpEnd); (10.1666666666667 : 6.03125 : JumpStart); (10.3333333333333 : 6.03125 : JumpEnd); (12 : 6.03125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/HOCKY/HOCKY_TKB" />
+      <nodes>
+        <classShapeMoniker Id="ff534ff0-0661-4673-95fb-8d3a798cbf80" />
+        <classShapeMoniker Id="6ec8f408-2c5c-42e0-8b0f-11187f18779e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 6.91429768880208); (12 : 6.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/MONHOCCHITIET/MONHOCCHITIET_TKB" />
+      <nodes>
+        <classShapeMoniker Id="e79000da-412a-4838-8f46-c74c17d79d46" />
+        <classShapeMoniker Id="6ec8f408-2c5c-42e0-8b0f-11187f18779e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="34078fb5-6811-4ff1-bb52-f64c87f708e7" absoluteBounds="7.125, 3.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/THPTDataContext/BAOCAOHUHONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da58beed-7862-4d38-b995-2c346401cc05" absoluteBounds="7.14, 3.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 11.3401985332031); (3.5 : 11.3401985332031); (3.5 : 9.375); (3.54166666666667 : 9.375 : JumpStart); (3.70833333333333 : 9.375 : JumpEnd); (8.125 : 9.375); (8.125 : 5.4631982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/THPTDataContext/LOP/LOP_BAOCAOHUHONG" />
+      <nodes>
+        <classShapeMoniker Id="b844fdac-3461-42ce-b610-add1fb3c4fec" />
+        <classShapeMoniker Id="34078fb5-6811-4ff1-bb52-f64c87f708e7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3623934a-60d5-475f-8edc-ff8a8f8de679" absoluteBounds="4.625, 3.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/THPTDataContext/COSOVATCHAT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2592f07d-2ba4-4d54-ad58-07ecc4ef3c57" absoluteBounds="4.64, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.625 : 3.97199625651042); (7.125 : 3.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/THPTDataContext/COSOVATCHAT/COSOVATCHAT_BAOCAOHUHONG" />
+      <nodes>
+        <classShapeMoniker Id="3623934a-60d5-475f-8edc-ff8a8f8de679" />
+        <classShapeMoniker Id="34078fb5-6811-4ff1-bb52-f64c87f708e7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="24dd5ceb-0c67-4747-87dc-6782bd482aaf" absoluteBounds="3.125, 2.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/THPTDataContext/tblFile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98dd3500-49bf-4ef8-8f47-b91f7b45f4bb" absoluteBounds="3.14, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

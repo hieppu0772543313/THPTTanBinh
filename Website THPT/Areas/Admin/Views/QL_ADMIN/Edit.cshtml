@@ -1,0 +1,67 @@
+﻿@model Website_THPT.Models.ADMIN
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2>ĐIỀU CHỈNH THÔNG TIN ADMIN</h2>
+
+@using (Html.BeginForm("Edit", "QL_ADMIN", FormMethod.Post, new
+{
+    @enctype =
+"multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Mã ADMIN:</label>
+            <div class="col-md-10">
+
+                <input type="text" size="70" name="iID" value="@Model.ID" readonly />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên ADMIN:</label>
+            <div class="col-md-10">
+                @*<input type="text" size="70" name="sTenGV" value="@ViewBag.TenGV"
+                    required />*@
+                @Html.EditorFor(model => model.Ten, new { htmlAttributes = new { @class
+                    = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ten, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên Đăng Nhập:</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenDn, new { htmlAttributes = new { @class
+                    = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenDn, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Pass:</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Pass, new { htmlAttributes = new { @class
+                   = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Pass, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU THÔNG TIN" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    @Html.ActionLink("VỀ TRANG QUẢN LÝ ADMIN", "Index")
+</div>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

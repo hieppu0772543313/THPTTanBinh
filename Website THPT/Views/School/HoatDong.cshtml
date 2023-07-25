@@ -1,0 +1,46 @@
+﻿@model Website_THPT.Models.TINTUC
+@{
+    ViewBag.Title = "Hoạt động";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .tenhoatdong {
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: #90201e;
+    }
+
+    .hoatdong {
+        border: groove;
+        border-color: #d44545;
+        margin-bottom: 10px;
+    }
+    hr
+    {
+        border-color: black;
+        width: 30%;
+    }
+</style>
+
+<div class="container hoatdong">
+    <h2 style="text-align: center">HOẠT ĐỘNG</h2>
+    <div class="tenhoatdong">
+        @Html.Raw(Model.TenTin)
+    </div>
+    <h5 style="text-align:center; font-style:italic">( Ngày đăng: @Html.FormatValue(@Model.NgayTao, "{0:dd/MM/yyyy}") )</h5>
+
+    <hr />
+
+    <div>
+        @Html.Raw(Model.NoiDung)
+    </div>
+
+    <br /><br />
+
+    <p>
+        @Html.ActionLink("Trở về", "DsHoatDong")
+    </p>
+</div>
+

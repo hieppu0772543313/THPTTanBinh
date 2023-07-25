@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Website_THPT.Models.ADMIN>
+@{
+    ViewBag.Title = "ADMIN";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold">QUẢN LÝ TÀI KHOẢN ADMIN</h2>
+<a href="@Url.Action("Create", "QL_ADMIN")" class="btn btn-success" role="button" style="margin-bottom: 5px;">
+    Thêm
+</a>
+<table class="table">
+    <tr>
+        <th>
+            Tên
+        </th>
+        <th>
+            Tên Đăng Nhập
+        </th>
+        <th>
+            Mật Khẩu
+        </th>
+
+        <th>
+            Chức Năng
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenDn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass)
+            </td>
+
+
+            <td>
+                <a href="@Url.Action("Details", new { id = item.ID })" class="btn btn-primary" role="button"><i class="fa-solid fa-circle-info"></i></a>
+                <a href="@Url.Action("Edit", new { id = item.ID })" class="btn btn-warning" role="button"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a href="@Url.Action("Delete", new { id = item.ID })" class="btn btn-danger" role="button"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+    }
+</table>
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

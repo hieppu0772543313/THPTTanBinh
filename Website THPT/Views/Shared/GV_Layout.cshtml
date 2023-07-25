@@ -1,0 +1,133 @@
+﻿@*<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    </html>*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/892abedb67.js" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+
+
+    <title>@ViewBag.Title</title>
+    <style>
+        .mylist {
+            border-right: double;
+            border-bottom: double;
+        }
+
+        .list-group-item:first-child {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+
+        .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .mylist > li {
+            list-style: none;
+            border-radius: 0;
+        }
+
+            .mylist > li > ul > li {
+                list-style: none;
+            }
+
+        .my_left_nav {
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group-item {
+            border-radius: 0;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 0;
+            border-top: 1px solid;
+            font-weight: bold;
+            background-color: darkgray;
+        }
+
+        .mylist1 {
+            margin: 0;
+            text-align: center;
+        }
+
+            .mylist1 > li > a {
+                background-color: lightgray;
+            }
+    </style>
+</head>
+
+
+
+<body>
+
+
+  
+
+
+
+    <div class="container-fluid" style="margin  : 0">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 my_left_nav">
+                <ul class="list-group mylist">
+                    <li>
+                        <a href="#" class="list-group-item">Quản lý tài khoản</a>
+                        <ul class="list-group mylist1">
+                            <li><a class="list-group-item" href=""> Quản Lý Admin</a></li>
+                            <li><a class="list-group-item" href=""> Quản Lý Giáo viên</a></li>
+                            <li><a class="list-group-item" href=""> Quản Lý Học Sinh</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="list-group-item" href="">Quản lý Trang tin</a></li>
+                    <li><a class="list-group-item" href="">Quản lý Menu</a></li>
+                    <li><a class="list-group-item" href="#">Quản lý Slide</a></li>
+                    <li><a class="list-group-item" href="">Quản lý cơ sở vật chất</a></li>
+                    <li><a class="list-group-item" href="#">Quản lý thời khoá biểu</a></li>
+                    <li><a class="list-group-item" href="">Quản lý Tin tức hoạt động</a></li>
+                    <li><a class="list-group-item" href="">Quản lý thông báo</a></li>
+                </ul>
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                @RenderBody()
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- /.container-->
+    <!-- /.container-->
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

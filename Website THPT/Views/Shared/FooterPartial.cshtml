@@ -1,0 +1,31 @@
+﻿<footer class="container myfooter">
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <ul class="fleft">
+                <li><i class="fa-solid fa-school" id="fname"></i> THPT TÂN BÌNH</li>
+                <li><i class="fa-solid fa-phone"></i>  077.2543.313</li>
+                <li><i class="fa-solid fa-location-dot"></i>   Ấp Cổng Xanh, thị trấn Tân Bình, Bắc Tân Uyên, Bình Dương</li>
+            </ul>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            
+            <ul class="fright">
+                <h4 style="color: black; font-weight:bold">PAGE</h4>
+                @*<li style="color:#171313; font-weight:bold;">PAGE</li>*@
+                <li><a style="color: gray;" href="@Url.Action("index","School")">Trang chủ</a></li>
+                <li><a style="color: gray;" href="@Url.Action("DsHoatDong","School")">Hoạt động</a></li>
+                <li><a style="color: gray;" href="@Url.Action("DsThongBao","School")">Thông báo</a></li>
+                <li><a style="color: gray;" href="">Tra cứu điểm</a></li>
+                <li><a style="color: gray;" href="">Tra cứu thời khoá biểu</a></li>
+            </ul>
+
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <h4 style="color: black; font-weight:bold">THỐNG KÊ TRUY CẬP</h4>
+            <h5><i class="fa fa-plug" aria-hidden="true"></i> Số lượt truy cập: @ApplicationInstance.Application["HitCounter"]</h5>
+            <h5><i class="fa fa-user" aria-hidden="true"></i> Đang truy cập: @ApplicationInstance.Application["Online"]</h5>
+</div>
+        </div>
+
+</footer>

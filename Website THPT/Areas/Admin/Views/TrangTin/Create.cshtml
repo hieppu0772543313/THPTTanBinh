@@ -1,0 +1,50 @@
+﻿@model Website_THPT.Models.TRANGTIN
+@{
+    ViewBag.Title = "Thêm trang tin";
+    Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
+}
+
+<script src="~/ckeditor_4.20.0_standard/ckeditor/ckeditor.js"></script>
+
+<h2 style="font-weight: bold; text-align: center; color: #90201e">THÊM MỚI TRANG TIN</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label class="control-label col-md-2">Tên trang:</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Ten, new { htmlAttributes = new { @class
+                = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ten, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Nội  dung:</label>
+            <div class="col-md-10">
+                <textarea name="NoiDung" id="nd"></textarea>
+                <script>CKEDITOR.replace('nd');</script>
+                @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text- danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("< Quay về Trang Tin", "Index")
+</div>
+
+
+@section NavLeft_Partial{
+    @Html.Action("NavLeft_Partial", "Home")
+}

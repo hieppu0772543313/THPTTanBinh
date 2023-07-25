@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Website_THPT.Models.BAOCAOHUHONG>
+@{
+    ViewBag.Title = "QL Cơ sở vật chất";
+    Layout = "~/Areas/Admin/Views/Shared/GV_Layout.cshtml";
+}
+
+<h2 style="text-align: center; font-weight: bold; color: #90201e">QUẢN LÝ CƠ SỞ VẬT CHẤT</h2>
+<a href="@Url.Action("Create", "GVBaoCaoHuHong")" class="btn btn-success" role="button" style="margin-bottom: 5px;">
+    Thêm
+</a>
+<table class="table">
+    <tr>
+        <th>
+            Mã
+        </th>
+        <th>
+            Tên Thiết Bị
+        </th>
+        <th>
+            Tình Trạng
+        </th>
+        <th>
+            Số Lượng
+        </th>
+        <th>
+            Tên Lớp
+        </th>
+        <th>
+            Trạng Thái
+        </th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaBaoCao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaThietBi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TinhTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+
+          
+        </tr>
+    }
+</table>
+
+@section NavLeft_GV_Partial{
+    @Html.Action("NavLeft_GV_Partial", "Home")
+}
+

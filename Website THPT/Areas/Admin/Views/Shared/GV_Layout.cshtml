@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/892abedb67.js" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+
+
+    <title>@ViewBag.Title</title>
+    <style>
+        .mylist {
+            border-right: double;
+            border-bottom: double;
+        }
+
+        .list-group-item:first-child {
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+
+        .list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .mylist > li {
+            list-style: none;
+            border-radius: 0;
+        }
+
+            .mylist > li > ul > li {
+                list-style: none;
+            }
+
+        .my_left_nav {
+            padding: 0;
+            margin: 0;
+           border-radius: 0;
+        }
+
+        .list-group-item {
+            border-radius: 0;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 0;
+            border-top: 1px solid;
+            font-weight: bold;
+            background-color: darkgray;
+        }
+
+        .mylist1 {
+            margin: 0;
+            text-align: center;
+        }
+
+            .mylist1 > li > a {
+                background-color: lightgray;
+            }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    @Html.Action("Nav_Partial", "Home")
+
+
+
+    <div class="container-fluid" style="margin  : 0">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 my_left_nav">
+                @RenderSection("NavLeft_GV_Partial", required: false)
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @RenderBody()
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- /.container-->
+    <!-- /.container-->
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

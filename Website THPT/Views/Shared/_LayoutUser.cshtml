@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/892abedb67.js" crossorigin="anonymous"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-image: url('../../Images/bg.png');
+            
+        }
+        
+        .myslider {
+            
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .img-slider {
+            margin-top: -10px;
+        }
+
+       .img-logo{
+           width: 100%;
+           padding-bottom: 2px;
+       }
+
+        .mynav {
+            background-color: #90201e;
+            border-radius: 0;
+            
+        }
+        
+        .fleft
+        {
+            text-decoration: none;
+            list-style: none;
+            font-weight:bold;
+            color: gray;
+            padding-top: 25px;
+        }
+        .fright{
+            list-style: none;
+            text-align: center;
+
+        }
+        .myfooter {
+            background-color: #90201e;
+            padding-top: 10px;
+            color: gray;
+           
+        }
+        .dropdown-menu > li > a {
+            background-color: #b55d5d;
+           border:none;
+        }
+            .dropdown-menu > li > a:hover{
+                background-color: #d43030;
+            }
+            .dropdown-menu {
+                background-color: #b55d5d;
+            }
+
+        
+    </style>
+</head>
+
+
+
+<body>
+    
+        <div class="container">
+            <div class="row"><img class="img-logo" src="~/Images/img1.png" /></div>
+
+
+        </div>
+        @Html.Action("NavPartial", "School")
+        @RenderSection("SliderPartial", required: false)    
+   
+        <br />
+        <div class="container">
+            <div class="row">
+
+                @RenderBody()
+
+            </div>
+
+        </div>
+        <!-- /.container-->
+        <!-- /.container-->
+
+        @Html.Action("FooterPartial", "School")
+    
+</body>
+</html>

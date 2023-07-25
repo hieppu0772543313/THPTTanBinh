@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Website_THPT.Models.THONGBAO>
+
+<style>
+    .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+        z-index: 2;
+        color: #fff;
+        background-color: #90201e;
+        border-color: #90201e;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        list-style: none;
+       
+    }
+
+    .list-group{
+        background-color: white;
+    }
+</style>
+<ul class="list-group">
+    <li class="list-group-item active" style="font-weight:bold; text-align:center; list-style: none">THÔNG BÁO MỚI</li>
+    <li style="list-style: none"><img class="imgthongbao" src="~/Images/thongbao.jpg" /></li>
+
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("ThongBao","School", new { ma = item.Ma})" class="list-group-item">@item.TenThongBao</a>
+
+    }
+</ul>

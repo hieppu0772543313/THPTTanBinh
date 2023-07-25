@@ -1,0 +1,43 @@
+﻿@model Website_THPT.Models.THONGBAO
+@{
+    ViewBag.Title = "Thông báo";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+    .tenthongbao {
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+        color: #90201e;
+    }
+    .thongbao {
+        border: groove;
+        border-color: #d44545;
+        margin-bottom: 10px;
+    }
+    hr {
+        border-color: black;
+        width: 30%;
+    }
+</style>
+<div class="container thongbao">
+    <h2 style="text-align: center">THÔNG BÁO</h2>
+    <div class="tenthongbao">
+        @Html.Raw(Model.TenThongBao)
+    </div>
+    <h5 style="text-align:center; font-style:italic">( Ngày đăng: @Html.FormatValue(@Model.NgayTao, "{0:dd/MM/yyyy}") )</h5>
+
+    <hr />
+
+    <div>
+        @Html.Raw(Model.NoiDung)
+    </div>
+
+    <br /><br />
+
+    <p>
+        @Html.ActionLink("Trở về", "DsThongBao")
+    </p>
+</div>
+
