@@ -1,4 +1,4 @@
-name: Develop Branch CI
+name: Build and Test on Develop Push
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
     - name: Check for code conflicts
       run: |
         git fetch --prune
-        git checkout origin/main
+        git checkout origin/master
         git merge --no-commit --no-ff origin/develop
         CONFLICTS=$(git diff --name-only --diff-filter=U)
         if [ -n "$CONFLICTS" ]; then
@@ -37,10 +37,10 @@ jobs:
         git checkout -
         git merge --abort
 
-    - name: Sync with main branch (if no conflicts)
+    - name: Sync with master branch (if no conflicts)
       if: ${{ success() }}
       run: |
         git fetch --prune
-        git checkout main
+        git checkout master
         git merge --ff-only origin/develop
-        git push origin main
+        git push origin master
