@@ -1,41 +1,37 @@
-name: Build and Test on Develop Push
+name: CI
 
 on:
   push:
-    branches:
-      - develop
-
+  pull_request:
+    branches: [ main ]
+# Specifies the dotnet SDK version for one of the
+# below steps
+env:
+  DOTNET_VERSION: '6.0.x'
+# This section contains all the jobs to be run.
 jobs:
-  build_and_test:
-    runs-on: windows-latest
-
+  ci:
+    name: ci-${{matrix.os}}
+    # Specifies what platforms the workflow should
+    # run on.
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Setup MSBuild path
-      uses: microsoft/setup-msbuild@v1.0.0
-
-    - name: Build and Test
-      run: |
-        msbuild /restore /p:Configuration=Debug /p:Platform="Any CPU" YourSolutionFile.sln
-        dotnet test YourTestProjectFolder/YourTestProject.csproj --configuration Debug
-
-    - name: Check for code conflicts
-      run: |
-        git fetch --prune
-        git checkout origin/master
-        git merge --no-commit --no-ff origin/develop
-        git diff --exit-code origin/master..HEAD
-        if [ $? -ne 0 ]; then
-          echo "Code conflicts detected. Please resolve conflicts before merging."
-          exit 1
-        fi
-
-    - name: Sync with master branch (if no conflicts)
-      if: ${{ success() }}
-      run: |
-        git fetch --prune
-        git checkout master
-        git merge --ff-only origin/develop
-        git push origin master
+    # Checks out the source code at the latest commit
+    - uses: actions/checkout@v3
+    # Installs the .NET SDK on the build machine
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    # Installs any NuGet packages required.
+    - name: Install dependencies
+      run: dotnet restore
+    # Builds the project
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    # Runs any tests in the project
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal
