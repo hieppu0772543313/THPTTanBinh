@@ -1,0 +1,46 @@
+name: Develop Branch CI
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Check for code conflicts
+      run: |
+        git fetch --prune
+        git checkout origin/main
+        git merge --no-commit --no-ff origin/develop
+        CONFLICTS=$(git diff --name-only --diff-filter=U)
+        if [ -n "$CONFLICTS" ]; then
+          echo "Code conflicts detected. Please resolve conflicts before merging."
+          exit 1
+        fi
+        git checkout -
+        git merge --abort
+
+    - name: Sync with main branch (if no conflicts)
+      if: ${{ success() }}
+      run: |
+        git fetch --prune
+        git checkout main
+        git merge --ff-only origin/develop
+        git push origin main
