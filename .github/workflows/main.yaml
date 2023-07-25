@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Đổi thành tên nhánh chính của bạn nếu không phải là "main"
+      - develop  # Đổi thành tên nhánh chính của bạn nếu không phải là "main"
 
 jobs:
   build:
