@@ -1,0 +1,41 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main  # Đổi thành tên nhánh chính của bạn nếu không phải là "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up .NET Core SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.x'  # Chọn phiên bản .NET Core mong muốn
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release
+
+      - name: Run tests
+        run: dotnet test --no-restore --verbosity normal
+
+      # Kiểm tra xung đột
+      - name: Check for conflicts
+        run: git diff --name-only $GITHUB_BASE_REF...$GITHUB_HEAD_REF | if grep .; then echo "CONFLICTS FOUND!"; exit 1; else echo "No conflicts found."; fi
+
+      # Nếu không có xung đột, tiến hành đồng bộ với nhánh chính (main)
+      - name: Deploy to main branch
+        if: success()  # Chỉ chạy nếu các bước kiểm tra thành công và không có xung đột
+        run: |
+          git config --global user.name 
+          git config --global user.email
+          git checkout main
+          git merge $GITHUB_HEAD_REF
+          git push origin main
